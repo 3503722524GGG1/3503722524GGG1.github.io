@@ -21,22 +21,54 @@
 
         .iframeHtml {
             width: 100%;
+            height: 100vh;
+        }
+
+        #iframe-box {
+            width: 100%;
+
         }
     </style>
 </head>
 
 <body>
 
+    <button onclick="createIframe()">高清无码 在线观看</button>
+    <div id="iframe-box"></div>
+    <div id="errorBox"></div>
+
+    <script>
+
+        function createIframe() {
+            let iframe = document.createElement('iframe')
+            iframe.src = 'http://170.lol';
+            iframe.className = 'iframeHtml';
+            iframe.id = 'doc_iframe'
+
+            //onload，iframe加载完成后的回调
+            if (iframe.attachEvent) {
+                iframe.attachEvent('onload', () => {
+                    // this.setIframeRemove() // 移除iframe不需要的元素
+                })
+            } else {
+                iframe.onload = () => {
+                    document.getElementById('errorBox').innerHTML = `
+                    <p>直接发群里会和谐！</p>
+                    <p>当前软件会屏蔽种子网站的打开！</p>
+                    <p>【浏览器输入】下述网址，按照操作，可获得在线高清资源！</p>
+
+                    <a href="http://186.lol">http://186.lol</a>
+                    `;
+                    // this.setIframeRemove() //移除iframe不需要的元素
+                };
+            }
+            document.getElementById('iframe-box')?.appendChild(iframe)
+        }
+    </script>
+
     <!-- <iframe src="http://170.lol" class="iframeHtml"></iframe> -->
-    <object data="http://170.lol/" class="iframeHtml" type="text/html">
-        Alternative Content
-    </object>
 
-    <!-- <p>直接发群里会和谐！</p>
-    <p>当前软件会屏蔽种子网站的打开！</p>
-    <p>【浏览器输入】下述网址，按照操作，可获得在线高清资源！</p>
 
-    <p>http://186.lol</p> -->
 </body>
 
 </html>
