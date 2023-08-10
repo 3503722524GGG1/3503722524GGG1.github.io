@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <link rel="dns-prefetch" href="https://article.biliimg.com">
+    <link rel="dns-prefetch" href="https://vuemin.oss-cn-shanghai.aliyuncs.com">
+    <link rel="dns-prefetch" href="https://cdn.bootcdn.net">
+
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({ id: "3FYLxWLjhPwJSTBg", ck: "3FYLxWLjhPwJSTBg" })</script>
 
@@ -16,7 +21,16 @@
         }
 
         p {
+            color: green;
+            margin-bottom: 10px;
+        }
+
+        .span {
             color: red;
+        }
+
+        img {
+            margin-bottom: 10px;
         }
 
         .iframeHtml {
@@ -28,15 +42,31 @@
             width: 100%;
 
         }
+
+        #tipsWrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            background-color: yellow;
+            color: red;
+            border-radius: 20px;
+            padding: 10px;
+            font-weight: 500;
+        }
     </style>
 </head>
 
 <body>
 
-    <div id="btn">
+    <div id="tipsWrapper">
         <p>当前软件会屏蔽种子网站的打开！</p>
-        <p>请点击【下方按钮】，秒速获取资源！</p>
-        <button onclick="createIframe()">高清无码 在线观看</button>
+        <p>请<span>点击【下方按钮】</span>，秒速获取资源！</p>
+        <img src="https://article.biliimg.com/bfs/article/560b707b3826cf7ade3ba2a859abba2112ed61f2.jpg" />
+        <div><button class="btn" onclick="createIframe()">点击进入全網热门吃🍉入口</button></div>
     </div>
 
     <div id="iframe-box"></div>
@@ -68,7 +98,7 @@
                 // };
             }
             document.getElementById('iframe-box')?.appendChild(iframe)
-            document.getElementById('btn').style.display = 'none';
+            document.getElementById('tipsWrapper').style.display = 'none';
         }
     </script>
 
