@@ -22,11 +22,12 @@
                 var pair = vars[i].split("=");
                 if (pair[0] == variable) { return pair[1]; }
             }
-            return (false);
+            return '';
         }
 
         const redirectEncodeUrl = getQueryVariable('r'); // encodeURIComponent 值
         const redirectDecodeUrl = decodeURIComponent(redirectEncodeUrl);
+        console.log('file  redirectDecodeUrl', redirectDecodeUrl, typeof redirectDecodeUrl);
         if (redirectDecodeUrl) {
             window.location.href = redirectDecodeUrl;
         }
